@@ -1,0 +1,29 @@
+/* app/page.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Menjaga elemen di tengah layar */
+  }
+  
+  .profilePic {
+    width: 20vw;             /* 20% dari lebar viewport */
+    height: 20vw;            /* 20% dari lebar viewport, agar tetap bulat */
+    border-radius: 50%;      /* Membuat bentuk bulat */
+    border: 5px solid white; /* Border putih 5px */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .profilePic:hover {
+    transform: scale(1.1);   /* Membesar ketika didekati oleh mouse */
+  }
+  
+  /* Responsif untuk tablet (max-width: 768px) */
+  @media (max-width: 768px) {
+    .profilePic {
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+  
