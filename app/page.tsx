@@ -1,68 +1,35 @@
-import React from "react";
-import Head from "next/head";
-import { Mail, Github, Linkedin } from "lucide-react";
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>CV Online</title>
-      </Head>
+<div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-500 to-white text-black p-10">
 
-      <header className="bg-blue-600 text-white py-6 text-center text-2xl font-bold">
-        My Online CV
-      </header>
+      {/* Foto Profil */}
+      <img
+        src="/profile.jpg"
+        alt="Foto Profil"
+        className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+      />
 
-      <main className="max-w-4xl mx-auto p-6 space-y-8">
-        {/* About Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold">About Me</h2>
-          <p className="mt-2">I am a passionate web developer with experience in building modern web applications.</p>
-        </div>
+      {/* Nama dan Deskripsi */}
+      <h1 className="text-3xl font-bold mt-4">Wahyudin sapari</h1>
+      <p className="text-lg mt-1">Web Developer | UI/UX Designer</p>
 
-        {/* Skills Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold">Skills</h2>
-          <ul className="list-disc pl-5 mt-2">
-            <li>React.js</li>
-            <li>Next.js</li>
-            <li>Tailwind CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
+      {/* Kontak */}
+      <div className="mt-4 flex space-x-4">
+        <a href="mailto:emailkamu@gmail.com" className="hover:text-gray-300">
+          📧 wahyudeadzone830@gmail.com.com
+        </a>
+        <span>📍 Jakarta, Indonesia</span>
+      </div>
 
-        {/* Services Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold">Services</h2>
-          <ul className="list-disc pl-5 mt-2">
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
-            <li>SEO Optimization</li>
-          </ul>
-        </div>
-
-        {/* Portfolio Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold">Portfolio</h2>
-          <p className="mt-2">Check out my projects on GitHub.</p>
-        </div>
-
-        {/* Contact Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold">Contact</h2>
-          <div className="flex space-x-4 mt-2">
-            <a href="mailto:your.email@example.com" className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg">
-              <Mail className="w-5 h-5 mr-2" /> Email
-            </a>
-            <a href="https://github.com/yourgithub" className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg">
-              <Github className="w-5 h-5 mr-2" /> GitHub
-            </a>
-            <a href="https://linkedin.com/in/yourlinkedin" className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg">
-              <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
-            </a>
-          </div>
-        </div>
-      </main>
+      {/* Social Media */}
+      <div className="mt-5 flex space-x-4">
+        <a href="https://linkedin.com/in/username" target="_blank">
+          <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8 hover:scale-110 transition" />
+        </a>
+        <a href="https://github.com/wahyds" target="_blank">
+          <img src="/Github.png" alt="GitHub" className="w-8 h-8 hover:scale-110 transition" />
+        </a>
+      </div>
     </div>
   );
 }
